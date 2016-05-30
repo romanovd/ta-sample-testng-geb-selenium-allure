@@ -1,0 +1,14 @@
+<suite name="Test-method Suite" parallel="methods" thread-count="1">
+<!--<suite name="Test-method Suite">-->
+    <test name="Smoke Deployment tests">
+       <classes>
+            <class name="org.goeuro.tests.Sorting"/>
+           <methods>
+               <include name="testAscending"/>
+<!--               <include name="testAscendingFarCities"/>
+               <include name="testAscendingManyRoutes"/>
+-->
+           </methods>
+        </classes>
+    </test>
+</suite>
