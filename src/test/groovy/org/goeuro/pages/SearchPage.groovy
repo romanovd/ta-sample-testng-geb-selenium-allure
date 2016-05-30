@@ -5,6 +5,8 @@ import org.apache.commons.logging.Log
 import org.apache.commons.logging.LogFactory
 import org.goeuro.models.SearchResultItem
 import org.goeuro.models.SearchResultList
+import ru.yandex.qatools.allure.annotations.Step
+
 /**
  * Created by dmitriy.romanov on 1/11/2016.
  */
@@ -73,7 +75,7 @@ class SearchPage extends BasePage {
             nextButton.click()
         }
         waitFor(
-                10,
+                30,
                 {
                     previousPage != getCurrentPageNo()
                 }
@@ -111,8 +113,10 @@ class SearchPage extends BasePage {
         waitForLoadingComplete()
     }
 
+    @Step
     public SearchResultList getPageResults() {
         log.info("Building result list for a page")
+        reportingHelper.takeScreenShotToReport("Building a test result set", getDriver())
         def results = getActiveTab().$(".result")
         SearchResultList resultList = new SearchResultList()
 

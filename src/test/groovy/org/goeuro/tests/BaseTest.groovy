@@ -20,7 +20,7 @@ class BaseTest {
     static Log log = LogFactory.getLog(this.getClass());
     public reportingHelper = new ReportingHelper()
 
-    protected static Browser browser
+    protected Browser browser
 
     public at(Page page) {
         browser.at page
