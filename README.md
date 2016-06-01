@@ -26,7 +26,7 @@ To run this project on other version please change corresponding section in pom.
 
 where testng - filename from src\test\resources\testng folder with preconfigured test suite.
 
-# Buuild reports
+# Build reports
 	To build allure reports run command:
 		mvn site
 
